@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Iniciar Sesión</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul>
+        {% for category, message in messages %}
+          <li style="color: {% if category == 'error' %}red{% else %}green{% endif %};">{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <form method="POST">
+        Usuario: <input type="text" name="usuario" required><br>
+        Email: <input type="email" name="email" required><br>
+        <button type="submit">Continuar</button>
+    </form>
+    <footer>
+        <p>&copy; 2025 Plataforma de Certificación</p>
+        <p>Para soporte escribir a: soporte@certificacion.co</p>
+    </footer>
+</body>
+</html>

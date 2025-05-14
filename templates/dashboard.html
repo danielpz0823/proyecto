@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Panel de Certificación</h1>
+    <ul>
+        <li><a href="{{ url_for('upload') }}">Subir archivos y certificar</a></li>
+        <li><a href="{{ url_for('resultados') }}">Ver resultados</a></li>
+        <li><a href="{{ url_for('logout') }}">Cerrar sesión</a></li>
+    </ul>
+    <footer>
+        <p>&copy; 2025 Plataforma de Certificación</p>
+        <p>Para soporte escribir a: soporte@certificacion.co</p>
+    </footer>
+</body>
+
+</html>
